@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Goblab</title>
+	<link rel="stylesheet" href="{{site.baseurl}}/style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://semantic-ui.com/dist/components/visibility.js"></script>
+	<script type="text/javascript" src="http://semantic-ui.com/dist/components/sidebar.js"></script>
+	<script type="text/javascript" src="http://semantic-ui.com/dist/components/transition.js"></script>
+</head>
+<body>
+
+{% include off-canvas.html %}
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+	{% include nav.html %}
+  <div class="right item">
+    <div class="ui buttons">
+      <a href="https://github.com/Goblab/open-world" target="_blank" class="ui olive button"><i class="fa fa-code-fork" aria-hidden="true"></i> Fork</a>
+      <a href="https://github.com/Goblab" target="_blank" class="ui blue button"><i class="fa fa-github" aria-hidden="true"></i> Repositorios</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+	{% include nav.html %}
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="fa fa-bars fa-2x"></i>
+        </a>
+		    {% include nav.html %}
+        <div class="right item">
+      <a href="https://github.com/Goblab/open-world" target="_blank" class="ui olive button"><i class="fa fa-code-fork" aria-hidden="true"></i> Fork</a>
+      <a href="https://github.com/Goblab" target="_blank" class="ui blue button"><i class="fa fa-github" aria-hidden="true"></i> Repositorios</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  {{content}}
+</div>
+
+
+
+</body>
+</html>
